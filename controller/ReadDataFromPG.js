@@ -8,8 +8,7 @@ router.get("/PullData", async (req, res) => {
   try {
     const result = await pool.query(`
     SELECT *
-    FROM test_sqn_pern
-    ORDER BY "Year" DESC
+    FROM populationdata
     LIMIT 10;`);
     res.json(result.rows);
   } catch (error) {
