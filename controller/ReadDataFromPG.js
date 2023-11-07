@@ -8,8 +8,7 @@ router.get("/PullData", async (req, res) => {
   try {
     const result = await pool.query(`
     SELECT *
-    FROM populationdata
-    LIMIT 10;`);
+    FROM populationdata`);
     res.json(result.rows);
   } catch (error) {
     res.status(500).send("Internal Server Error");
