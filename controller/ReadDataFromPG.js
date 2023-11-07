@@ -9,9 +9,9 @@ router.get("/PullData", async (req, res) => {
     const result = await pool.query(`
       SELECT *
       FROM populationdata
-      WHERE "Year" = $1
+      WHERE "Year" = '1950'
       ORDER BY "Country Name"
-    `, [year]);
+    `);
     res.json(result.rows);
   } catch (error) {
     res.status(500).send("Internal Server Error");
