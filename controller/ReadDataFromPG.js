@@ -6,7 +6,6 @@ router.use(express.json());
 
 router.get("/PullData", async (req, res) => {
   try {
-    const year = req.query.year || '1950';
     const result = await pool.query(`
       SELECT *
       FROM test_sqn_pern
