@@ -16,4 +16,11 @@ router.get("/PullData", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+router.get("/test", async (req, res) => {
+  try {
+    res.send("Hi");
+  } catch (error) {
+    res.status(500).send("Internal Server Error");
+  }
+});
 module.exports = router;
