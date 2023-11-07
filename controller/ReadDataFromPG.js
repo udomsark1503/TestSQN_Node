@@ -8,7 +8,7 @@ router.get("/PullData", async (req, res) => {
   try {
     const result = await pool.query(`
       SELECT *
-      FROM test_sqn_pern
+      FROM populationdata
       WHERE "Year" = $1
       ORDER BY "Country Name"
     `, [year]);
